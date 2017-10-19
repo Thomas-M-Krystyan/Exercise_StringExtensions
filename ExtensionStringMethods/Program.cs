@@ -6,7 +6,10 @@ namespace ExtensionStringMethods
     {
         internal static void Main(string[] args)
         {
-            const string testMessage = "Ala ma kota";
+            // --------------------------------------------------------------
+            // Change output string
+            // --------------------------------------------------------------
+            string testMessage = "Ala ma kota";
 
             Console.WriteLine("Capitalize first letter of each word");
             Console.WriteLine(testMessage.CapitalizeFirstLetters() + "\n");
@@ -16,6 +19,19 @@ namespace ExtensionStringMethods
 
             Console.WriteLine("Capitalize even letters of each word");
             Console.WriteLine(testMessage.CamelcaseEveryLetter() + "\n");
+
+            // --------------------------------------------------------------
+            // Check palindromes
+            // --------------------------------------------------------------
+            testMessage = "Madam";
+
+            Console.WriteLine("Check if current word is palindrome");
+            Console.WriteLine(testMessage.CheckIfPalindrome() + "\n");
+
+            testMessage = "Cossosoc";
+
+            Console.WriteLine("Check if current word is pallindrome");
+            Console.WriteLine(testMessage.CheckIfPalindrome() + "\n");
 
             Console.ReadLine();
         }

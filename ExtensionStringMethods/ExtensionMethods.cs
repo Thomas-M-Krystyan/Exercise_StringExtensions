@@ -59,5 +59,23 @@ namespace ExtensionStringMethods
 
             return result.ToString();
         }
+
+        // CASE 1: "Madam" --> True
+        // CASE 2: "mAdaM" --> True
+        // CASE 3: "Cossoc" --> False
+        internal static bool CheckIfPalindrome(this string dataText)
+        {
+            int counter = dataText.Length / 2;
+
+            for (int i = 0; i < counter; i++)
+            {
+                if (dataText[i].ToString().ToLower() != dataText[dataText.Length - 1 - i].ToString().ToLower())
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }
